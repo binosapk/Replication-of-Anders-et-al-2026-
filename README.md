@@ -6,8 +6,6 @@ Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindh
 
 **Data:** the survey and design files of the original study (<https://github.com/dugstad/Solar-vs-Wind-Experiment>) are copied into this repository, so the code runs as it is.
 
-**Status:** working version prepared for an oral examination, 13 November 2026. Results are from the files in `output/`.
-
 ## What is in this repository
 
 | Path | Content |
