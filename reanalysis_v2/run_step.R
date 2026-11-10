@@ -2,7 +2,9 @@
 # Step 00 builds state_base.RData. Every other step loads it and saves only the objects it creates
 # to state_<step>_<sample>.RData, so several steps can run in parallel.
 .a <- commandArgs(trailingOnly = TRUE); .step <- .a[1]; .samp <- if (length(.a) > 1) .a[2] else "all"
-.V2 <- "C:/Users/bisap1788/OneDrive - Norwegian University of Life Sciences/Leeds/Solar-vs-Wind-Experiment/reanalysis_v2"
+# Paths: this script's own folder is the analysis folder (.V2); its parent holds the data files (.ROOT). Nothing to edit.
+.f <- sub("^--file=", "", grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE))
+.V2 <- normalizePath(if (length(.f)) dirname(.f[1]) else getwd(), winslash = "/")
 .ROOT <- dirname(.V2)
 suppressPackageStartupMessages({ library(apollo); library(dplyr); library(tidyr) })
 setwd(.V2)

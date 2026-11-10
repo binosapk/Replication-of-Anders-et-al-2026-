@@ -2,8 +2,9 @@
 # 00  Data preparation: choice data, respondent covariates, population weights
 # =====================================================================
 suppressPackageStartupMessages({ library(apollo); library(dplyr); library(tidyr) })
-ROOT   <- "C:/Users/bisap1788/OneDrive - Norwegian University of Life Sciences/Leeds/Solar-vs-Wind-Experiment"
-V2     <- file.path(ROOT, "reanalysis_v2")
+# Paths come from run_step.R (.V2 = this folder, .ROOT = its parent with the data csv files); if sourced directly, the working directory is taken as this folder.
+V2     <- if (exists(".V2")) .V2 else normalizePath(getwd(), winslash = "/")
+ROOT   <- dirname(V2)
 setwd(ROOT); set.seed(2026)
 outdir <- file.path(V2, "apollo_output"); dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
 

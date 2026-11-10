@@ -4,26 +4,32 @@ Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindh
 
 **Contributor:** Binod
 
-**Data and original replication package (not copied here):** <https://github.com/dugstad/Solar-vs-Wind-Experiment>
+**Data:** the survey and design files of the original study (<https://github.com/dugstad/Solar-vs-Wind-Experiment>) are copied into this repository, so the code runs as it is.
 
 **Status:** working version prepared for an oral examination, 13 November 2026. Results are from the files in `output/`.
 
 ## What is in this repository
 
-| Folder | Content |
+| Path | Content |
 |---|---|
-| `code/` | R scripts, one per analysis step, and `run_step.R` that runs one step |
-| `output/` | Text output of each step, and the acceptance-curve figure |
+| `sol_complete.csv`, `vind_complete.csv`, `CE_design_final.csv` | Survey responses (solar, wind) and choice-experiment design, from the original study |
+| `reanalysis_v2/` | The R scripts, one per analysis step, and `run_step.R` that runs one step |
+| `reanalysis_v2/ssb_pop.csv` | Population margins (Statistics Norway, Innlandet, age 18+) used for the raking weights |
+| `reanalysis_v2/output/` | Text output of each step, and the acceptance-curve figure `fig_acceptance.png` (the only figure the scripts produce) |
 
-Not included: the data, the saved model objects (`state_*.RData`, Apollo output) and the first-round pooled mixed-logit outputs. The first-round pooled runs stopped early and are invalid (see "Convergence of the pooled mixed logit").
+Not included: the saved model objects (`state_*.RData`, Apollo output), which the scripts create when they run, and the first-round pooled mixed-logit outputs. The first-round pooled runs stopped early and are invalid (see "Convergence of the pooled mixed logit").
 
 ## How to run
 
-Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`.
+Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`. The scripts find their own folder; there are no paths to edit.
 
-1. Download the data from the repository above and set the paths `ROOT` in `code/00_data.R` and `.V2` in `code/run_step.R`; both are hard-coded to the author's computer.
-2. Run `Rscript run_step.R 00 all` (builds the data, covariates and raking weights), then any step, for example `Rscript run_step.R 13 all`. The output goes to the console; redirect it to a file.
-3. The random-coefficient models are slow on one core: about 8 hours for the replication (step 03) and about 39 to 69 hours per job for the pooled mixed logit (step 11).
+From the repository folder:
+
+1. `Rscript reanalysis_v2/run_step.R 00 all` builds the data, covariates and raking weights.
+2. `Rscript reanalysis_v2/run_step.R 02 all` (or any other step) runs one step. The output goes to the console; redirect it to a file, for example `Rscript reanalysis_v2/run_step.R 13 all > reanalysis_v2/output/13.txt`.
+3. Some steps need the saved results of earlier steps (for example 04 loads the results of 02, 05 and 06b load those of 06, 13 loads those of 11 and 15, and 09 loads results of earlier model steps).
+4. Steps 00 and 02 were run from a fresh copy of this repository and gave exactly the same output as in `reanalysis_v2/output/`. The other steps were not rerun from this copy.
+5. The random-coefficient models are slow on one core: about 8 hours for the replication (step 03) and about 39 to 69 hours per job for the pooled mixed logit (step 11).
 
 ## Scripts
 
@@ -47,6 +53,7 @@ Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`.
 | 14 | `14_curves.R` | Acceptance curves (figure) |
 | 15 | `15_pooled_scaled.R` | Pooled mixed logit with a scaled optimiser (the unrestricted reference model U3) |
 | 16 | `16_collinearity.R` | Collinearity check of the covariates |
+| 17 | `17_pooled_seed.R` | Draw-seed check of the pooled mixed logit (unrestricted model and everything equal, seed 2027). Started but not completed: there is no result, so the tests above rest on one set of draws |
 
 ## Main results
 
