@@ -1,0 +1,20 @@
+Sample vs population (Statistics Norway, Innlandet 2025, age 18+)
+            variable solar wind population
+           age 18-29  14.7 13.2       16.2
+           age 30-39  16.1 14.6       14.6
+           age 40-49  15.5 16.4       14.2
+           age 50-59  19.4 18.8       17.5
+             age 60+  34.3 37.1       37.4
+               women  51.2 50.5       50.2
+        basic school   5.3  4.7       26.1
+     upper secondary  43.1 43.9       43.5
+ higher short (<=4y)  34.2 32.7       22.7
+   higher long (5y+)  17.4 18.7        7.7
+
+Weights after raking on age x sex and education: summary and effective sample size
+solar  min 0.39  max 6.05  effective n = 398 of 775
+wind   min 0.32  max 7.73  effective n = 365 of 788
+
+Share of respondents with missing information: income 0.191  education 0.013 
+
+[step 00 (all) finished in 0.1 min]

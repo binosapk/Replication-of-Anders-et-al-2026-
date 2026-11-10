@@ -1,0 +1,44 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+First fit LL -4552.42; restart from it LL -4552.42
+Pooled mixed logit, job 'U2': LL -4552.42, 68 free parameters, BIC 9746.3, 12504 observations (3323 min; Relative function convergence (favorable))
+Reference: the two separate models of step 04 sum to LL -4557.03 with 68 parameters (different draws, so only roughly comparable)
+
+Wind minus solar difference of every parameter (x), robust t  [coefficients in 100 NOK / Cholesky units]
+ parameter    solar wind_minus_solar robust_t
+      m_sq   19.795           87.911    684.2
+     m_nop -111.109           44.071    431.9
+      m_d1  -41.024         -103.103   -339.9
+    m_view  -68.876           39.693    893.1
+    m_cost   -2.595           -0.056     -0.3
+    w_el38   -4.245           24.583    530.1
+    w_el57   -9.027           27.874    254.7
+     w_pl3    6.775          -21.944   -431.3
+     w_pl6   -9.538            3.277     20.7
+     w_wil  -10.967          -10.165   -107.7
+      w_d2  -20.115          -52.102   -111.6
+      w_d3   -3.948          -33.321   -499.7
+       l11  156.172           95.415    796.0
+       l21 -104.819           91.237    215.6
+       l22  106.684          -39.407   -468.8
+       l31  -21.631          -24.455    -58.1
+       l32   12.813          -14.450   -101.2
+       l33   26.542           29.672    199.4
+       l41  -42.243           33.000     66.9
+       l42   24.675          -31.688  -1419.9
+       l43   38.056           -0.174     -1.6
+       l44   53.691          -50.496  -1113.0
+       l51    0.170           -0.236     -1.1
+       l52    1.192           -1.058     -5.6
+       l53   -0.415            1.096      5.1
+       l54    2.254           -1.989     -8.5
+       l55    0.421            1.737      8.7
+     g_age   18.861            2.043    247.9
+     g_fem   28.686           -4.073    -61.2
+    g_univ  -14.880           -3.471     -5.1
+     g_inc   16.049            3.732     14.4
+    g_incm   30.606           -2.057    -32.0
+     g_exp   77.959           12.148     56.5
+     g_org   24.079           10.094     47.0
+
+[step 11 (U2) finished in 3323.0 min]

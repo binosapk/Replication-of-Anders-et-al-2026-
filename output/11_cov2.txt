@@ -1,0 +1,7 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+First fit LL -4565.56; restart from it LL -4565.56
+Pooled mixed logit, job 'cov2': LL -4565.56, 58 free parameters, BIC 9678.3, 12504 observations (2368 min; Relative function convergence (favorable))
+Reference: the two separate models of step 04 sum to LL -4557.03 with 68 parameters (different draws, so only roughly comparable)
+
+[step 11 (cov2) finished in 2367.6 min]

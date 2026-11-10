@@ -1,0 +1,70 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Model comparison
+
+===== SOLAR =====
+                               model      LL  k    BIC p_vs_previous
+              LC2-0  constant shares -2882.5 14 5887.3            NA
+ LC2-D  shares: exogenous covariates -2870.2 21 5923.7       8.5e-04
+     LC2-DA shares: + attitudes, Q41 -2663.2 26 5553.4       2.9e-87
+         LC3    + cost-ignorer class -2323.6 40 4996.4      6.9e-136
+
+===== WIND =====
+                               model      LL  k    BIC p_vs_previous
+              LC2-0  constant shares -2351.5 14 4825.4            NA
+ LC2-D  shares: exogenous covariates -2331.1 21 4845.9       9.2e-07
+     LC2-DA shares: + attitudes, Q41 -2060.8 26 4349.1      1.3e-114
+         LC3    + cost-ignorer class -1769.2 40 3888.4      2.1e-115
+
+Population-weighted vs unweighted share in the status-quo-only class, model LC2-DA
+           solar  wind
+unweighted 0.525 0.617
+weighted   0.522 0.593
+(raw share of respondents who ALWAYS chose the status quo: solar 0.359, wind 0.520)
+
+Membership of the status-quo-only class (LC2-DA): odds ratios, robust z in brackets
+                 variable         solar          wind
+              age (+10 y)  1.33 (  4.1)  1.31 (  3.7)
+                    women  1.57 (  1.9)  1.82 (  2.1)
+        university degree  0.86 ( -0.6)  1.05 (  0.2)
+        income (+1 M NOK)  1.28 (  0.8)  0.97 ( -0.1)
+           income missing  1.23 (  0.7)  0.90 ( -0.3)
+                  exposed  1.20 (  0.5)  0.38 ( -1.8)
+        env. organisation  0.86 ( -0.5)  1.29 (  0.7)
+         attitude Q7 (+1)  0.39 ( -9.2)  0.29 ( -9.2)
+         concern Q10 (+1)  1.64 (  4.9)  1.32 (  2.4)
+    visit nature Q31 (+1)  1.15 (  1.9)  1.26 (  2.6)
+ preserve nature Q32 (+1)  2.02 (  2.9)  2.20 (  3.1)
+    believes results used  0.47 ( -3.2)  1.11 (  0.3)
+
+WTA of the TRADER class, NOK per household-year (robust s.e.); LC2-DA
+ attribute solar se_s   wind se_w
+        sq -8757 2567 -10160 3786
+      el38   204  731    -13 1034
+      el57  1232  753  -1235 1061
+       pl3  -402  746   1205 1079
+       pl6  1575  733    882 1104
+       nop  5063 1202   5052 1592
+       wil   925  843   1210 1056
+        d1  4472 1180   9566 2399
+        d2  3832 1145   6129 1823
+        d3  1338 1001   1177 1190
+      view  2517  810   2538 1005
+
+Status-quo-only class: P(status quo) = 0.932 (solar), 0.975 (wind)
+
+[solar LC3] class shares: traders 0.25, cost-ignorers 0.37, status-quo-only 0.38;  P(status quo | cost-ignorers, reference scenario) = 0.25
+  cost-ignorers, utility weights:  el38 -0.12; el57 -0.25; pl3 -0.15; pl6 -0.43; nop -1.22; wil -0.3; d1 -0.58; d2 -0.5; d3 -0.2; view -0.78 
+  membership of the cost-ignorer class, odds ratio (z): stated cost importance (Q25)  0.83 (-2.3) ; attitude  0.73 (-3.1) 
+
+[wind LC3] class shares: traders 0.15, cost-ignorers 0.28, status-quo-only 0.57;  P(status quo | cost-ignorers, reference scenario) = 0.25
+  cost-ignorers, utility weights:  el38 0.02; el57 0.09; pl3 -0.19; pl6 -0.16; nop -0.8; wil -0.3; d1 -1.36; d2 -0.97; d3 -0.48; view -0.33 
+  membership of the cost-ignorer class, odds ratio (z): stated cost importance (Q25)  0.85 (NA) ; attitude  0.83 (NA) 
+
+[step 06 (both) finished in 38.3 min]

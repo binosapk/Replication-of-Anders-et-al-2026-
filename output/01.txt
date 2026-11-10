@@ -1,0 +1,51 @@
+(a) Share choosing the development option by bill reduction (%), unweighted [95% CI] and weighted
+ cost share.solar lo.solar hi.solar weighted.solar share.wind lo.wind hi.wind
+ 2000        35.1     31.3     38.9           34.9       23.2    19.8    26.6
+ 3000        37.8     33.9     41.6           38.4       30.2    26.6    33.8
+ 4000        29.8     26.1     33.5           31.2       21.7    18.3    25.0
+ 5000        44.3     40.3     48.2           41.2       30.6    27.0    34.2
+ 6000        37.1     33.3     40.9           40.1       28.1    24.4    31.7
+ 7000        39.9     35.9     43.8           42.2       28.6    25.0    32.1
+ 8000        44.4     40.5     48.4           43.2       34.3    30.5    38.1
+ 9000        41.8     37.8     45.7           40.7       29.0    25.4    32.6
+ weighted.wind
+          26.6
+          34.3
+          25.8
+          32.1
+          31.0
+          30.8
+          32.1
+          29.4
+
+Descriptive slope: change in P(development) per +1,000 NOK (linear probability model, respondent-clustered s.e.)
+solar  slope 0.0123 (cluster s.e. 0.0026), t = 4.72
+wind   slope 0.0094 (cluster s.e. 0.0024), t = 3.89
+
+(b) Who NEVER trades?  Binary logit, odds ratios (z in brackets), respondent level
+                         variable         solar          wind
+                      age (+10 y)  1.33 (  4.5)  1.28 (  3.9)
+                            women  1.13 (  0.5)  1.19 (  0.8)
+                university degree  0.96 ( -0.2)  0.87 ( -0.6)
+                income (+1 M NOK)  1.23 (  0.8)  0.86 ( -0.6)
+                   income missing  2.01 (  2.8)  1.07 (  0.2)
+                env. organisation  0.97 ( -0.1)  0.89 ( -0.4)
+ exposed (lives near / owns land)  0.87 ( -0.4)  0.69 ( -1.1)
+                 attitude Q7 (+1)  0.41 (-10.5)  0.38 (-10.5)
+                 concern Q10 (+1)  1.30 (  2.9)  1.32 (  2.6)
+            visit nature Q31 (+1)  1.03 (  0.4)  1.00 ( -0.0)
+         preserve nature Q32 (+1)  2.11 (  3.6)  1.84 (  2.7)
+        believes results are used  0.56 ( -2.4)  0.90 ( -0.4)
+McFadden pseudo-R2: solar 0.407, wind 0.492
+
+(c) Consequentiality (Q41): 'very/fairly sure the authorities will use the results'
+ sample share_sure always_SQ_if_sure always_SQ_if_unsure
+  solar      0.292             0.217               0.417
+   wind      0.287             0.425               0.559
+
+Weighted vs unweighted share of respondents who ALWAYS chose the status quo
+           solar  wind
+unweighted 0.359 0.520
+weighted   0.372 0.509
+
+[step 01 (all) finished in 0.0 min]

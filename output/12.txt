@@ -1,0 +1,37 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+                                         model      LL  k     BIC
+ U  everything technology-specific, scale free -7762.7 24 15751.9
+                    A  common WTAs, scale free -7784.5 13 15691.5
+                     B  common WTAs, scale = 1 -7849.8 12 15812.8
+        C  only status quo differs, scale free -7769.6 14 15671.3
+         D  only status quo differs, scale = 1 -7770.0 13 15662.5
+
+Likelihood-ratio tests
+                                                             LR df       p
+U vs A  Do the WTAs differ (scale allowed to differ)?      43.4 11 9.2e-06
+A vs B  Is the scale different (WTAs common)?             130.7  1 2.9e-30
+A vs C  Does the status quo constant differ (scale free)?  29.7  1 5.1e-08
+C vs U  Do the ten other WTAs differ (SQ and scale free)?  13.7 10 1.9e-01
+C vs D  Is the scale different (SQ may differ)?             0.7  1 4.1e-01
+
+Model C: wind scale lambda = 0.89 (robust s.e. 0.13; test of lambda = 1: z = -0.82);  status quo WTA difference wind - solar = 9025 NOK (z 3.7)
+
+Model U: WTA differences wind - solar (NOK; WTA = -100 x coefficient, status quo +100 x), robust t
+  attribute solar wind_minus_solar    t
+ status quo  2749            10335  3.8
+       el38  1261             -951  0.7
+       el57  1376            -2322  1.7
+        pl3  1606             -300  0.2
+        pl6  3161            -2549  1.6
+        nop  7439             -863  0.4
+        wil  2346             -769  0.5
+         d1  4512             4322 -1.7
+         d2  2317             2869 -1.4
+         d3   598             1494 -0.9
+       view  4395            -1210  0.8
+
+[step 12 (mnl) finished in 0.6 min]

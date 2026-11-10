@@ -1,0 +1,111 @@
+# Re-analysis of Dugstad, Hoel and Lindhjem (2026): solar versus wind power
+
+Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindhjem, H. (2026), *Kraft med mindre konflikt? Preferanser for sol- vs. vindkraft*, Samfunnsøkonomen 138(2), with the same data and my own R code.
+
+**Contributor:** Binod
+
+**Data and original replication package (not copied here):** <https://github.com/dugstad/Solar-vs-Wind-Experiment>
+
+**Status:** working version prepared for an oral examination, 13 November 2026. Results are from the files in `output/`.
+
+## What is in this repository
+
+| Folder | Content |
+|---|---|
+| `code/` | R scripts, one per analysis step, and `run_step.R` that runs one step |
+| `output/` | Text output of each step, and the acceptance-curve figure |
+
+Not included: the data, the saved model objects (`state_*.RData`, Apollo output) and the first-round pooled mixed-logit outputs. The first-round pooled runs stopped early and are invalid (see "Convergence of the pooled mixed logit").
+
+## How to run
+
+Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`.
+
+1. Download the data from the repository above and set the paths `ROOT` in `code/00_data.R` and `.V2` in `code/run_step.R`; both are hard-coded to the author's computer.
+2. Run `Rscript run_step.R 00 all` (builds the data, covariates and raking weights), then any step, for example `Rscript run_step.R 13 all`. The output goes to the console; redirect it to a file.
+3. The random-coefficient models are slow on one core: about 8 hours for the replication (step 03) and about 39 to 69 hours per job for the pooled mixed logit (step 11).
+
+## Scripts
+
+| Step | Script | Content |
+|---|---|---|
+| 00 | `00_data.R` | Data, covariates, raking weights |
+| a3 | `a3_published.R` | Check of the published Table A.3 and Figure 6 |
+| 01 | `01_explore.R` | Descriptive statistics |
+| 02 | `02_mnl_ladder.R` | MNL ladder: shifters, income, attitudes |
+| 03 | `03_replicate_anders.R` | Benchmark mixed-logit replication, 500 MLHS draws (follows the specification and Apollo structure of the published script) |
+| 04 | `04_mixed_mvn.R` | Full-covariance mixed logit with random cost, staged estimation, 250 MLHS draws |
+| 05 | `05_pooled_lc.R` | Pooled two-class latent class |
+| 06, 06b | `06_latent_class.R`, `06b_lc3_constrained.R` | Latent classes LC2 and LC3 |
+| 07 | `07_hybrid.R` | Hybrid choice model with five indicators |
+| 08 | `08_bayes.R` | Bayesian full-covariance model (did not converge; exploratory) |
+| 09 | `09_policy.R` | Cost per kWh, acceptance curves |
+| 10 | `10_robustness.R` | Respondent exclusion rules |
+| 11 | `11_pooled_mixed.R` | Pooled mixed logit with all restrictions |
+| 12 | `12_pooled_mnl_scale.R` | Pooled MNL scale test |
+| 13 | `13_pooled_summary.R` | Likelihood-ratio tests and Holm correction for the pooled mixed logit |
+| 14 | `14_curves.R` | Acceptance curves (figure) |
+| 15 | `15_pooled_scaled.R` | Pooled mixed logit with a scaled optimiser (the unrestricted reference model U3) |
+| 16 | `16_collinearity.R` | Collinearity check of the covariates |
+
+## Main results
+
+**Data.** 775 respondents (solar) and 788 (wind), eight choice tasks each: 6,200 and 6,304 observations. Utility is written in willingness-to-accept (WTA) space; units are NOK per household and year. Respondents who chose "no development" in all eight tasks (35.9% solar, 52.0% wind) are kept in the main sample. Raking weights (age by sex, education) give an effective sample of about 398 (solar) and 365 (wind).
+
+**Published figures and replication.** Figure 6 of the article is reproduced exactly from Table A.3 for all twelve scenario-and-visibility combinations (maximum difference 0 øre/kWh).
+
+| | Solar: published | Solar: replication | Wind: published | Wind: replication |
+|---|---:|---:|---:|---:|
+| Log-likelihood | −2536.4 | −2531.3 | −2065.2 | −2054.7 |
+| BIC | 5,335 | 5,324.6 | 4,392 | 4,371.9 |
+| Parameters | 30 | 30 | 30 | 30 |
+
+Points raised about the article: the worked example for wind in Table A.6 uses the 57,000-household coefficient (17.16 øre/kWh) while Figure 6 uses the 38,000-household coefficient (17.62 øre/kWh); the solar status quo value is NOK 3,822 in the text and NOK 3,872 in Table A.3; the published standard errors for wind are much smaller than robust ones from the replication (status quo mean: 0.703 against 5.70, in units of 100 NOK). The replication script also contains a block labelled "Figure 8" whose delta-method expression is divided by an unexplained constant (13.88); the published article has no Figure 8 and no such constant, and that block was not used.
+
+**Latent classes (LC3).** Shares: cost-responsive traders 25.4% (solar) and 15.3% (wind); cost-ignorers 36.9% and 27.9%; status-quo-only 37.8% and 56.8%. The trader cost coefficient is fixed at its two-class value because the unrestricted wind model collapsed toward a second cost-ignorer class. Trader WTAs are imprecise.
+
+**Policy.** For scenario P6 without visibility, cost per kWh is 3.3 (solar) and 9.2 (wind) øre/kWh in the article. Acceptance curves show that a large status-quo-only class remains unlikely to accept even at high compensation (at NOK 50,000 per year: 50.0% solar, 39.2% wind, scenario P6).
+
+### Tests of differences between solar and wind
+
+Pooled MNL (step 12) and pooled two-class latent class (step 05):
+
+| Test | LR | df | p |
+|---|---:|---:|---:|
+| MNL: all eleven WTAs equal (scale free) | 43.4 | 11 | 9.2e-06 |
+| MNL: status quo term equal (scale free) | 29.7 | 1 | 5.1e-08 |
+| MNL: other ten WTAs equal | 13.7 | 10 | 0.19 |
+| MNL: scale equal | 0.7 | 1 | 0.41 |
+| Latent class: technology-specific constants | 45.9 | 2 | 1.1e-10 |
+| Latent class: ten trader attribute WTAs equal | 21.7 | 10 | 0.016 |
+
+Pooled mixed logit (steps 11, 13, 15; 12,504 observations, 250 MLHS draws). The unrestricted model has 68 parameters and is exactly the two separate models on the same draws; each restriction sets one block of wind-minus-solar differences to zero.
+
+| Restriction | Log-lik. | Parameters | LR | df | p | p (Holm) |
+|---|---:|---:|---:|---:|---:|---:|
+| Unrestricted (U3) | −4552.2 | 68 | | | | |
+| Cost scale equal | −4552.4 | 62 | 0.4 | 6 | 1.0 | 1.0 |
+| Taste covariance equal | −4565.6 | 58 | 26.8 | 10 | 0.0028 | 0.008 |
+| Ten attribute WTA means equal | −4572.7 | 58 | 41.1 | 10 | 1.1e-05 | 4e-05 |
+| Status quo constant equal | −4572.7 | 67 | 41.0 | 1 | 1.5e-10 | 8e-10 |
+| Seven status quo shifters equal | −4557.1 | 61 | 9.9 | 7 | 0.19 | 0.38 |
+| Everything equal (joint test) | −4621.8 | 34 | 139.3 | 34 | 1.1e-14 | |
+
+The technologies differ in the status quo constant, the means of the attribute valuations and the taste covariance, but not in the cost scale or the status quo shifters. In the pooled MNL only the status quo constant differs.
+
+BIC is lowest for the model with everything equal (9,564.4 against 9,745.8 for the unrestricted model) because the penalty for 34 extra parameters exceeds the likelihood gain; the likelihood-ratio test nevertheless rejects that restriction.
+
+### Convergence of the pooled mixed logit
+
+- In the first round the model with equal shifters (−4557.14) fitted better than the unrestricted model that contains it (−4568.42), so the first-round unrestricted model had stopped early. Tests against it were discarded.
+- All models were restarted from the best solution (jobs ending in 2). The unscaled unrestricted restart (−4552.42) was still below the restricted scale model (−4552.39).
+- The unrestricted model was therefore re-estimated with parameter scaling in the optimiser (`15_pooled_scaled.R`; same model, draws and likelihood). It reached −4552.17, above every restricted model, and is the reference in `13_pooled_summary.R`.
+
+## Limits
+
+- The covariance matrix of the pooled mixed logit is not positive definite (smallest eigenvalue −1.1, five undefined standard errors) and the robust standard errors of the main coefficients are implausibly small. Delta-method z-values for the solar-wind differences are therefore not reported; the likelihood-ratio tests do not use them.
+- The tests rest on one set of 250 MLHS draws. The scaled and unscaled estimates of the unrestricted model differ by 0.25 log-likelihood points. No re-estimation with another draw seed was done.
+- No bootstrap of standard errors was done. Standard errors of random-coefficient models, like the published ones, are probably too small.
+- The point estimates of the spread of the log-scale are 0.41 (solar) and 2.11 (wind), but the joint scale test does not reject equality (LR 0.4): this spread is weakly identified and is not interpreted.
+- Random-coefficient models use 250 to 500 draws (the article 2,000). The Bayesian model did not converge. Attitude variables are measured after the choice tasks and may partly rationalise the choices; BIC comparisons apply to choice models only (the hybrid likelihood includes the indicators).
+- The Word report with the full discussion is not in this repository.

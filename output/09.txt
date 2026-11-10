@@ -1,0 +1,134 @@
+(A) Figure 6 recomputed from the published Table A.3 (ore/kWh) vs the figure in the article
+ visible scenario recomputed.wind article.wind recomputed.solar article.solar
+    TRUE       P1            17.6         17.6              9.5           9.5
+    TRUE       P2            18.2         18.2             10.7          10.7
+    TRUE       P3            14.7         14.7             11.6          11.6
+    TRUE       P4            15.3         15.3             12.8          12.8
+    TRUE       P5            14.2         14.2              8.6           8.6
+    TRUE       P6            11.1         11.1              6.5           6.5
+   FALSE       P1            15.7         15.7              6.3           6.3
+   FALSE       P2            16.3         16.3              7.5           7.5
+   FALSE       P3            12.8         12.8              8.4           8.4
+   FALSE       P4            13.3         13.3              9.6           9.6
+   FALSE       P5            12.3         12.3              5.4           5.4
+   FALSE       P6             9.2          9.2              3.3           3.3
+max absolute difference: 0 ore/kWh
+
+Worked example, Table A.6 of the article (alternative 1 with visibility, i.e. < 1 km, all protected, few plants):
+  solar with the el38 coefficient (948 NOK): sum 13879 NOK -> 9.48 ore/kWh;  with the el57 coefficient (1370 NOK): sum 14301 NOK -> 9.77 ore/kWh
+  wind  with the el38 coefficient (-286 NOK): sum 25791 NOK -> 17.62 ore/kWh;  with the el57 coefficient (-960 NOK): sum 25117 NOK -> 17.16 ore/kWh
+
+(B) Cost per kWh (ore), delta-method s.e. in brackets, for every model; scenario x visibility
+
+===== SOLAR =====
+                      model visible          P1          P2          P3
+                        MNL      no   5.8 (1.1)   8.0 (1.2)   7.8 (1.2)
+                        MNL     yes   8.8 (1.3)  11.0 (1.6)  10.8 (1.5)
+        LC traders (LC2-DA)      no  -2.8 (1.2)  -1.7 (1.1)  -2.4 (1.3)
+        LC traders (LC2-DA)     yes  -1.1 (1.1)   0.0 (1.0)  -0.7 (1.1)
+ MMNL replication of Anders      no   7.0 (0.1)   7.9 (0.1)   8.1 (0.1)
+ MMNL replication of Anders     yes   9.7 (0.1)  10.5 (0.1)  10.8 (0.1)
+       MMNL full covariance      no   5.9 (0.4)   6.1 (0.3)  11.2 (0.3)
+       MMNL full covariance     yes  10.4 (0.5)  10.6 (0.4)  15.7 (0.5)
+          P4          P5          P6
+  10.0 (1.4)   5.8 (1.0)   2.7 (1.0)
+  13.0 (1.8)   8.9 (1.3)   5.7 (1.1)
+  -1.3 (1.1)  -4.6 (1.4)  -5.8 (1.7)
+   0.4 (1.0)  -2.9 (1.2)  -4.1 (1.5)
+   9.0 (0.1)   6.0 (0.1)   3.6 (0.0)
+  11.6 (0.1)   8.6 (0.1)   6.2 (0.1)
+  11.4 (0.3)   4.8 (0.2)   3.9 (0.3)
+  15.9 (0.5)   9.3 (0.2)   8.4 (0.4)
+
+===== WIND =====
+                      model visible          P1          P2          P3
+                        MNL      no  15.2 (2.7)  15.6 (2.8)  13.6 (2.4)
+                        MNL     yes  17.4 (3.1)  17.8 (3.2)  15.8 (2.7)
+        LC traders (LC2-DA)      no  -0.4 (1.4)   0.2 (1.3)  -3.5 (2.0)
+        LC traders (LC2-DA)     yes   1.3 (1.3)   1.9 (1.2)  -1.8 (1.7)
+ MMNL replication of Anders      no  16.2 (0.7)  16.3 (0.6)  14.4 (0.3)
+ MMNL replication of Anders     yes  17.8 (0.7)  18.0 (0.7)  16.1 (0.4)
+       MMNL full covariance      no  16.9 (0.5)  17.7 (0.4)  13.9 (0.5)
+       MMNL full covariance     yes  19.1 (0.5)  19.9 (0.5)  16.0 (0.5)
+          P4          P5          P6
+  14.1 (2.4)  12.6 (2.3)   9.2 (1.7)
+  16.2 (2.8)  14.7 (2.6)  11.3 (2.0)
+  -2.9 (1.8)  -4.5 (2.0)  -7.0 (2.6)
+  -1.2 (1.5)  -2.8 (1.8)  -5.2 (2.3)
+  14.6 (0.3)  13.3 (0.3)   9.4 (0.3)
+  16.2 (0.3)  14.9 (0.3)  11.0 (0.4)
+  14.6 (0.4)  13.2 (0.4)  10.1 (0.3)
+  16.8 (0.5)  15.3 (0.5)  12.2 (0.4)
+
+Ratio of the status-quo term, wind / solar ('3.5 times higher' in the article), delta method (independent samples):
+  MNL                          solar 2749 NOK (se 1453), wind 13084 NOK (se 2323); ratio 4.76 (delta se 2.65)
+  MMNL replication of Anders   solar 4059 NOK (se 86), wind 14661 NOK (se 570); ratio 3.61 (delta se 0.16)
+
+(C) Share of households accepting a scenario at a given annual bill reduction, LC2-D (class shares by exogenous characteristics only)
+
+[SOLAR, P6, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 40.4% (2.1) 40.7% (2.1)
+  2000 42.5% (1.8) 42.8% (1.9)
+  5000 44.9% (1.7) 45.2% (1.8)
+  9000 47.0% (1.8) 47.3% (1.9)
+ 15000 48.7% (1.9) 49.0% (2.0)
+ 25000 49.7% (2.0) 50.0% (2.1)
+ 50000 50.0% (2.0) 50.3% (2.1)
+
+[SOLAR, P1, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 34.2% (2.4) 34.4% (2.4)
+  2000 37.1% (2.0) 37.4% (2.1)
+  5000 40.8% (1.7) 41.1% (1.8)
+  9000 44.4% (1.7) 44.7% (1.8)
+ 15000 47.5% (1.8) 47.8% (1.9)
+ 25000 49.4% (1.9) 49.7% (2.1)
+ 50000 50.0% (2.0) 50.3% (2.1)
+
+[SOLAR, P4, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 31.2% (2.6) 31.4% (2.7)
+  2000 34.4% (2.2) 34.6% (2.3)
+  5000 38.6% (1.9) 38.8% (2.0)
+  9000 42.9% (1.8) 43.1% (1.9)
+ 15000 46.8% (1.8) 47.1% (1.9)
+ 25000 49.2% (1.9) 49.5% (2.0)
+ 50000 50.0% (2.0) 50.3% (2.1)
+
+[WIND, P6, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 30.3% (2.1) 30.4% (2.2)
+  2000 31.8% (1.8) 31.9% (1.9)
+  5000 33.6% (1.7) 33.7% (1.8)
+  9000 35.5% (1.6) 35.6% (1.7)
+ 15000 37.3% (1.7) 37.4% (1.8)
+ 25000 38.6% (1.7) 38.8% (1.8)
+ 50000 39.2% (1.7) 39.4% (1.8)
+
+[WIND, P1, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 21.4% (2.3) 21.5% (2.4)
+  2000 23.6% (2.1) 23.7% (2.2)
+  5000 26.6% (1.8) 26.7% (1.9)
+  9000 30.2% (1.8) 30.3% (1.9)
+ 15000 34.1% (1.9) 34.2% (2.0)
+ 25000 37.5% (1.8) 37.6% (1.9)
+ 50000 39.1% (1.8) 39.3% (1.8)
+
+[WIND, P4, not visible]  compensation (NOK) | accepted share, population-weighted (delta s.e.) | unweighted
+   NOK    weighted  unweighted
+     0 25.1% (2.4) 25.2% (2.5)
+  2000 27.1% (2.1) 27.2% (2.2)
+  5000 29.7% (1.8) 29.8% (1.9)
+  9000 32.6% (1.7) 32.8% (1.8)
+ 15000 35.6% (1.7) 35.8% (1.8)
+ 25000 38.0% (1.8) 38.2% (1.8)
+ 50000 39.2% (1.7) 39.3% (1.8)
+
+Share of households in the status-quo-only class (LC2-D), weighted vs unweighted:
+           solar  wind
+unweighted 0.541 0.625
+weighted   0.537 0.623
+
+[step 09 (both) finished in 1.2 min]

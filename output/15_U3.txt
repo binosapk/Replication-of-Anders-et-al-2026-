@@ -1,0 +1,44 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+First fit LL -4552.17; restart from it LL -4552.17
+Pooled mixed logit, job 'U3': LL -4552.17, 68 free parameters, BIC 9745.8, 12504 observations (2523 min; Relative function convergence (favorable))
+Reference: the two separate models of step 04 sum to LL -4557.03 with 68 parameters (different draws, so only roughly comparable)
+
+Wind minus solar difference of every parameter (x), robust t  [coefficients in 100 NOK / Cholesky units]
+ parameter    solar wind_minus_solar robust_t
+      m_sq   19.472           90.658    954.4
+     m_nop -111.368           40.202   1213.0
+      m_d1  -41.224         -103.311   -359.7
+    m_view  -69.118           42.904   1004.9
+    m_cost   -2.606           -0.116     -0.5
+    w_el38   -4.425           27.927   1081.9
+    w_el57   -9.157           29.847    801.1
+     w_pl3    6.786          -22.111   -452.0
+     w_pl6   -9.577            2.704     15.2
+     w_wil  -11.019          -11.263    -15.6
+      w_d2  -20.234          -56.815   -174.5
+      w_d3   -4.094          -37.115   -317.7
+       l11  156.928          107.056    571.0
+       l21 -104.770           85.548   2005.6
+       l22  106.827          -35.007  -1473.6
+       l31  -21.229          -19.365    -42.8
+       l32   12.821          -14.363   -293.9
+       l33   26.476           28.397    360.8
+       l41  -41.935           36.931    450.0
+       l42   24.819          -34.203   -390.6
+       l43   38.154            1.740     10.4
+       l44   53.802          -52.392   -334.2
+       l51    0.170           -0.244     -1.2
+       l52    1.194           -1.045     -5.0
+       l53   -0.415            1.070      3.1
+       l54    2.242           -1.958     -5.7
+       l55    0.414            1.694      7.1
+     g_age   18.899            2.901    198.4
+     g_fem   28.819           -3.006    -14.1
+    g_univ  -14.996           -3.047     -6.2
+     g_inc   16.181            4.120      8.8
+    g_incm   30.611           -0.638     -5.6
+     g_exp   77.627           18.863     79.5
+     g_org   24.033           12.219     25.6
+
+[step 15 (U3) finished in 2523.5 min]

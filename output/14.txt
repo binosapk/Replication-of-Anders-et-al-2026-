@@ -1,0 +1,5 @@
+null device 
+          1 
+figure written to C:/Users/bisap1788/OneDrive - Norwegian University of Life Sciences/Leeds/Solar-vs-Wind-Experiment/reanalysis_v2/output/fig_acceptance.png 
+
+[step 14 (all) finished in 3.9 min]

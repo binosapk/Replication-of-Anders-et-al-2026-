@@ -1,0 +1,56 @@
+Unrestricted model must have the highest likelihood; check: TRUE 
+                                                        model      LL  k    BIC
+                     U  all 34 parameters technology-specific -4552.2 68 9745.8
+ scale: mean, spread, correlations of the log-scale equal (6) -4552.4 62 9689.7
+         cov: covariance of the 4 taste dimensions equal (10) -4565.6 58 9678.3
+                  attr: means of 10 attribute WTAs equal (10) -4572.7 58 9692.6
+                       sq: mean status quo constant equal (1) -4572.7 67 9777.4
+                    g: 7 shifters of the status quo equal (7) -4557.1 61 9689.7
+  all: one preference distribution for both technologies (34) -4621.8 34 9564.4
+                                 converged
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+ Relative function convergence (favorable)
+
+Likelihood-ratio tests against the unrestricted pooled model (= solar and wind separate, same draws)
+                                                  restriction    LR df       p
+ scale: mean, spread, correlations of the log-scale equal (6)   0.4  6 1.0e+00
+         cov: covariance of the 4 taste dimensions equal (10)  26.8 10 2.8e-03
+                  attr: means of 10 attribute WTAs equal (10)  41.1 10 1.1e-05
+                       sq: mean status quo constant equal (1)  41.0  1 1.5e-10
+                    g: 7 shifters of the status quo equal (7)   9.9  7 1.9e-01
+  all: one preference distribution for both technologies (34) 139.3 34 1.1e-14
+  p_Holm
+ 1.0e+00
+ 8.4e-03
+ 4.4e-05
+ 7.5e-10
+ 3.8e-01
+      NA
+Holm adjustment covers the five single-block tests; 'all' is the joint test.
+
+WTA in NOK per household-year, solar vs wind from the unrestricted pooled model (difference = wind - solar; delta-method s.e.)
+                         attribute solar  wind difference se        z
+ status quo (reference respondent)  1947 11013       9066  9   954.44
+                     no protection 11137  7117      -4020  3 -1213.03
+                            < 1 km  4122 14453      10331 29   359.73
+                           visible  6912  2621      -4290  4 -1004.89
+                    production 38k   442 -2350      -2793  3 -1081.88
+                    production 57k   916 -2069      -2985  4  -801.10
+                   plants moderate  -679  1533       2211  5   452.02
+                       plants many   958   687       -270 18   -15.18
+                   wilderness only  1102  2228       1126 72    15.58
+                            1-3 km  2023  7705       5682 33   174.51
+                            3-6 km   409  4121       3711 12   317.68
+
+Status quo constant, wind / solar (reference respondent): 5.66 (delta s.e. 0.01); test of the article's '3.5 times': wind - 3.5 x solar = 4198 NOK (s.e. 10, z 435.36)
+
+Scale (log of the cost coefficient): solar mean -2.61, wind mean -2.72; wind - solar = -0.12 (delta s.e. 0.24, z -0.48) i.e. a factor 0.89 on the cost coefficient / scale
+Spread of the log-scale (Cholesky l55): solar 0.41, wind 2.11
+Cost-scale correlations (solar | wind) are in the output of step 04; here: the 'scale' LR test above covers mean, spread and correlations jointly.
+
+[step 13 (all) finished in 0.1 min]

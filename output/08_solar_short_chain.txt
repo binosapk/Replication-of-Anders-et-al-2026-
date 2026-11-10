@@ -1,0 +1,48 @@
+Apollo ignition sequence completed
+NULL
+Bayesian mixed logit, solar sample: 10000 burn-in + 10000 retained iterations (32 min)
+columns of the stored chain of means: iteration, w_sq, w_el38, w_el57, w_pl3, w_pl6, w_nop, w_wil, w_d1, w_d2, w_d3, w_view, b_cost 
+
+Posterior mean of the MEAN WTA (NOK per household-year), posterior sd and 95% credible interval; Anders's published value for comparison
+ attribute WTA_post_mean post_sd q025 q975 Anders_published
+      w_sq          4453    1011 2355 6248             3872
+    w_el38          2108     820  232 3363              948
+    w_el57           428     249 -127  858             1370
+     w_pl3           634     477 -164 1683              785
+     w_pl6          2631     768 1076 3958             1744
+     w_nop          7414     247 6889 7884             7429
+     w_wil          1347     320  377 1699             1755
+      w_d1          3354     374 2758 4113             4359
+      w_d2          2618     469 1644 3348             2590
+      w_d3           148     215 -371  511              592
+    w_view          5009     453 4138 5879             4699
+
+Posterior mean standard deviation across respondents (NOK):
+  w_sq w_el38 w_el57  w_pl3  w_pl6  w_nop  w_wil   w_d1   w_d2   w_d3 w_view 
+ 12319   8499   1396   5869   8682   1754   1374   3647   4374   1444   6183 
+
+Posterior mean correlations of the status quo constant with the other random coefficients (and with the cost / scale coefficient):
+w_el38 w_el57  w_pl3  w_pl6  w_nop  w_wil   w_d1   w_d2   w_d3 w_view b_cost 
+ -0.99   0.30  -0.98  -0.99  -0.92  -0.24   0.96  -0.98   0.59  -0.99   0.17 
+
+Posterior mean correlation matrix, attribute block (rounded):
+       w_sq w_el38 w_el57 w_pl3 w_pl6 w_nop w_wil w_d1 w_d2 w_d3 w_view
+w_sq    1.0   -1.0    0.3  -1.0  -1.0  -0.9  -0.2  1.0 -1.0  0.6   -1.0
+w_el38 -1.0    1.0   -0.4   1.0   1.0   0.9   0.1 -1.0  1.0 -0.5    1.0
+w_el57  0.3   -0.4    1.0  -0.4  -0.4  -0.4   0.7  0.4 -0.3 -0.2   -0.4
+w_pl3  -1.0    1.0   -0.4   1.0   1.0   0.9   0.1 -1.0  1.0 -0.5    1.0
+w_pl6  -1.0    1.0   -0.4   1.0   1.0   0.9   0.2 -1.0  1.0 -0.5    1.0
+w_nop  -0.9    0.9   -0.4   0.9   0.9   1.0   0.1 -0.9  0.9 -0.3    0.9
+w_wil  -0.2    0.1    0.7   0.1   0.2   0.1   1.0 -0.1  0.2 -0.5    0.1
+w_d1    1.0   -1.0    0.4  -1.0  -1.0  -0.9  -0.1  1.0 -1.0  0.5   -1.0
+w_d2   -1.0    1.0   -0.3   1.0   1.0   0.9   0.2 -1.0  1.0 -0.5    1.0
+w_d3    0.6   -0.5   -0.2  -0.5  -0.5  -0.3  -0.5  0.5 -0.5  1.0   -0.6
+w_view -1.0    1.0   -0.4   1.0   1.0   0.9   0.1 -1.0  1.0 -0.6    1.0
+
+Convergence: Geweke z of the chains of the means (|z| < 2 is fine):
+  w_sq w_el38 w_el57  w_pl3  w_pl6  w_nop  w_wil   w_d1   w_d2   w_d3 w_view 
+-22.94  26.70   5.29  12.34  27.35   4.30  13.24 -14.95  17.82   3.46  11.59 
+b_cost 
+ -8.44 
+
+[step 08 (solar) finished in 32.8 min]

@@ -1,0 +1,60 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+
+===== SOLAR  WTA in NOK per household-year (robust s.e.) =====
+                                      variant respondents    status_quo
+                              all respondents         775   2749 (1453)
+                Anders's protest rule removed         609  -3644 (1888)
+ protest rule without protected-value reasons         663  -1706 (1736)
+             no always-status-quo respondents         497  -8884 (2527)
+         only believers in consequences (Q41)         226  -7041 (3673)
+                          without 10% fastest         697   3615 (1417)
+                    without 'difficult' (6-7)         587   1771 (1621)
+ no_protection        lt_1km       visible
+   7439 (1484)   4512 (1251)   4395 (1048)
+   6912 (1332)   4516 (1153)   4401 ( 964)
+   7223 (1414)   4470 (1196)   4341 ( 999)
+   7052 (1368)   4846 (1180)   4106 ( 937)
+   9402 (2661)   5153 (1855)   3113 (1349)
+   7803 (1527)   4175 (1231)   4278 (1035)
+   7108 (1503)   4485 (1281)   3789 (1010)
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+
+===== WIND  WTA in NOK per household-year (robust s.e.) =====
+                                      variant respondents    status_quo
+                              all respondents         788  13084 (2323)
+                Anders's protest rule removed         555   3274 (1544)
+ protest rule without protected-value reasons         652   7439 (1638)
+             no always-status-quo respondents         378  -6945 (2873)
+         only believers in consequences (Q41)         226   8955 (5726)
+                          without 10% fastest         709  13214 (2468)
+                    without 'difficult' (6-7)         657  13889 (2732)
+  no_protection         lt_1km       visible
+    6576 (1702)    8834 (2244)   3185 (1079)
+    5203 (1409)    9042 (2069)   3201 ( 970)
+    6009 (1613)    9389 (2290)   3376 (1078)
+    5344 (1454)    9986 (2244)   3153 ( 956)
+  14884 (10612)  16819 (12618)    562 (2828)
+    7349 (1878)    9011 (2406)   3973 (1219)
+    5316 (1682)    8103 (2337)   2873 (1141)
+
+Share of respondents removed by the two protest rules (Anders's / without protected-value reasons):
+     solar  wind
+[1,] 0.214 0.296
+[2,] 0.145 0.173
+Share of the always-status-quo respondents whose reason is the protected-value statement 'Supplying Europe ... at the expense of Norwegian nature':
+solar  wind 
+0.194 0.237 
+
+[step 10 (both) finished in 3.2 min]

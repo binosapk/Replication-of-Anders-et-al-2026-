@@ -1,0 +1,56 @@
+Apollo ignition sequence completed
+Stage 1 (wind): four correlated Normals, fixed cost: LL -2060.2, 29 parameters, BIC 4374.2 (24 min; Relative function convergence (favorable))
+Apollo ignition sequence completed
+Stage 2 (wind): + random cost / scale dimension: LL -2045.4, 34 parameters, BIC 4388.3 (79 min; Relative function convergence (favorable))
+Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+ Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
+LR test stage 2 vs stage 1 (random cost): 29.6 on 5 df, p = 1.8e-05
+Model reported below: stage 2 (random cost) 
+
+Means of the random coefficients (NOK; compensation = sign-flipped) and standard deviations implied by the Cholesky factor
+   coefficient mean_NOK robust_se sd_NOK
+    status quo    13683       354  23341
+ no protection     5555       375   7179
+        < 1 km    10033       349   6046
+       visible     3174       280   4275
+log cost: mean -2.88 (robust s.e. 0.55), sd 1.89
+
+Implied correlation matrix of the random coefficients
+                 status quo no protection < 1 km visible log cost (scale)
+status quo             1.00          0.06  -0.45   -0.52            -0.04
+no protection          0.06          1.00   0.29    0.08            -0.08
+< 1 km                -0.45          0.29   1.00    0.74            -0.21
+visible               -0.52          0.08   0.74    1.00             0.05
+log cost (scale)      -0.04         -0.08  -0.21    0.05             1.00
+
+Fixed coefficients, WTA in NOK (robust t)
+       attribute   WTA     t
+  production 38k  -496   3.3
+  production 57k -1178   6.8
+ plants moderate  1087  -9.1
+     plants many  1139  -8.9
+ wilderness only  1439  -7.0
+          1-3 km  5998 -17.8
+          3-6 km  2014 -12.1
+
+Status quo shifters in NOK (robust t)
+           shifter effect     t
+       age (+10 y)   2739  24.2
+             women  -1353  -8.4
+ university degree  -2881 -13.8
+ income (+1 M NOK)   -332  -3.0
+    income missing   -756  -2.3
+           exposed  13524  30.7
+ env. organisation   6396  21.6
+
+[step 04 (wind) finished in 103.2 min]

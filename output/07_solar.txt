@@ -1,0 +1,36 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Hybrid choice model, solar sample (356 min; successful convergence)
+log-likelihood -7985.2 (includes the 5 indicators), parameters 52
+
+Loadings of the indicators on the latent variable 'concern about nature' (robust t)
+            indicator loading     t
+          Q7_attitude   -1.89 -15.2
+          Q10_concern    1.87   9.6
+            Q31_visit    1.07  11.1
+ Q33_landscape_impact    2.08  16.0
+         Q32_preserve    1.52  11.9
+
+Structural equation: effect of respondent characteristics on the latent variable (LV has unit variance)
+    characteristic  gamma    t
+       age (+10 y)  0.014  0.6
+             women  0.142  1.8
+ university degree -0.024 -0.3
+ income (+1 M NOK)  0.084  0.8
+    income missing  0.222  2.3
+           exposed  0.297  2.2
+ env. organisation  0.419  3.9
+
+Effect of the latent variable on the choice (robust t): lambda (status quo, 100 NOK per LV unit) 198 (7.7) ; lambda2 (no-protection dummy) -66.9 (-2.7)
+
+Implied effect on the status quo WTA through the latent variable, NOK per household-year  (delta method, robust)
+    characteristic effect_NOK   se    z
+       age (+10 y)        275  427  0.6
+             women       2811 1610  1.7
+ university degree       -480 1648 -0.3
+ income (+1 M NOK)       1659 2066  0.8
+    income missing       4396 2000  2.2
+           exposed       5891 2811  2.1
+ env. organisation       8290 2345  3.5
+
+[step 07 (solar) finished in 356.1 min]

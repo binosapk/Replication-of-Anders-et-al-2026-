@@ -1,0 +1,75 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Three classes with a cost-responsive trader class (b_cost fixed at its two-class value)
+
+===== SOLAR =====
+LC2-DA: LL -2663.2, k 26, BIC 5553.4   |   LC3 (restricted): LL -2324.5, k 39, BIC 4989.5   (unrestricted LC3: LL -2323.6)
+LR test LC3 vs LC2-DA: 677.4 on 13 df, p = 2.3e-136
+Class shares (unweighted | population-weighted):
+           trader cost_ignorer sq_only
+unweighted  0.254        0.369   0.378
+weighted    0.265        0.365   0.370
+Trader-class WTA, NOK (robust s.e.):
+ attribute    WTA   se
+        sq -14129 2658
+      el38   1113 2128
+      el57    131 2035
+       pl3  -4242 2903
+       pl6  -2544 2773
+       nop  -2650 2886
+       wil   2293 2557
+        d1   5146 2418
+        d2   5053 3093
+        d3   1491 2992
+      view  -1353 3214
+Cost-ignorer class, utility weights (robust t):
+  par weight    t
+ el38  -0.12 -1.1
+ el57  -0.25 -2.2
+  pl3  -0.15 -1.3
+  pl6  -0.43 -3.9
+  nop  -1.23 -7.1
+  wil  -0.30 -2.5
+   d1  -0.58 -4.1
+   d2  -0.49 -3.5
+   d3  -0.20 -1.5
+ view  -0.79 -6.6
+Status-quo-only class: P(status quo) = 0.991.  Cost-ignorers: P(status quo) at the reference scenario = 0.252
+Membership of the cost-ignorer class, odds ratio per +1 point of STATED cost importance (Q25): 0.84 (z -2.3);  attitude Q7: 0.72 (z -3.2)
+
+===== WIND =====
+LC2-DA: LL -2060.8, k 26, BIC 4349.1   |   LC3 (restricted): LL -1770.3, k 39, BIC 3881.7   (unrestricted LC3: LL -1769.2)
+LR test LC3 vs LC2-DA: 581.1 on 13 df, p = 8.3e-116
+Class shares (unweighted | population-weighted):
+           trader cost_ignorer sq_only
+unweighted  0.153        0.279   0.568
+weighted    0.165        0.288   0.546
+Trader-class WTA, NOK (robust s.e.):
+ attribute    WTA    se
+        sq -29360 11352
+      el38 -19004  7925
+      el57 -10378 11399
+       pl3  -8768 14116
+       pl6   2237 13401
+       nop  -9137 11911
+       wil   2504  7971
+        d1   1294 10251
+        d2  11176  6935
+        d3 -11897 14784
+      view   8435  9624
+Cost-ignorer class, utility weights (robust t):
+  par weight    t
+ el38   0.02  0.2
+ el57   0.09  0.7
+  pl3  -0.19 -1.5
+  pl6  -0.16 -1.2
+  nop  -0.80 -5.0
+  wil  -0.30 -2.3
+   d1  -1.36 -8.5
+   d2  -0.96 -7.1
+   d3  -0.48 -3.5
+ view  -0.33 -3.2
+Status-quo-only class: P(status quo) = 0.988.  Cost-ignorers: P(status quo) at the reference scenario = 0.249
+Membership of the cost-ignorer class, odds ratio per +1 point of STATED cost importance (Q25): 0.85 (z -1.6);  attitude Q7: 0.84 (z -1.6)
+
+[step 06b (both) finished in 3.9 min]

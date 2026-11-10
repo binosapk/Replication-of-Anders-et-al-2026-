@@ -1,0 +1,74 @@
+Apollo ignition sequence completed
+Replication of Anders's model, wind sample (478 min, converged: successful convergence)
+
+                              published       mine   diff
+log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+ log-likelihood                  -2065.2    -2054.7   10.5
+BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+ BIC                                4392     4371.9  -20.1
+parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+ parameters                           30         30
+
+Means in 100 NOK (a coefficient of -52.8 = 5,284 NOK of compensation); sd_mine_chol = diagonal Cholesky term
+ parameter mean_published se_published mean_mine se_classical se_robust
+        sq        137.256        0.703    146.61         5.55      5.70
+      el38          2.863        0.271      9.65         2.00      1.29
+      el57          9.602        0.334      7.41         2.30      2.19
+       pl3         -7.261        0.254    -10.69         1.80      1.23
+       pl6         -7.949        0.293     -2.41         1.70      0.84
+       nop        -52.835        0.248    -74.40         2.74      1.00
+       wil        -12.876        0.234    -19.51         1.54      0.99
+        d1        -95.514        0.364    -99.67         5.54      5.35
+        d2        -66.840        0.351    -66.94         3.60      2.73
+        d3        -25.801        0.251    -27.72         2.27      1.21
+      view        -28.000        0.210    -23.78         1.36      1.00
+ sd_published sd_mine_chol
+      261.896        277.5
+       23.445         39.7
+       25.249         18.3
+       11.505          3.1
+       39.353         23.4
+       71.033         88.7
+        3.703          4.5
+       63.241         67.7
+        7.169         11.5
+       13.783          6.6
+       32.003         32.4
+
+Cost: mean of log b_cost  published -1.86  mine -2.27 (robust s.e. 0.19);  sd of log b_cost  published 2.70  mine 2.40
+
+Ratio of published standard error to my robust standard error for the coefficient MEANS (published / mine):
+  m_sq m_el38 m_el57  m_pl3  m_pl6  m_nop  m_wil   m_d1   m_d2   m_d3 m_view 
+ 0.123  0.210  0.152  0.206  0.347  0.249  0.237  0.068  0.129  0.207  0.211 
+
+[step 03 (wind) finished in 478.3 min]

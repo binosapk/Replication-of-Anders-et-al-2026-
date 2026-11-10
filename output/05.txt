@@ -1,0 +1,20 @@
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+Apollo ignition sequence completed
+                                        model      LL  k    BIC
+              A  common WTA, common constants -4764.3 28 9792.7
+           B  + technology-specific constants -4741.4 30 9765.8
+ C  + technology-specific class-share effects -4734.9 42 9866.0
+          U  all separate (two LC2-DA models) -4724.0 52 9938.6
+
+Likelihood-ratio tests
+                                                          LR df       p
+A -> B  constants differ between technologies?          45.9  2 1.1e-10
+B -> C  covariates act differently on class shares?     13.0 12 3.7e-01
+C -> U  do the 10 attribute WTAs of the traders differ? 21.7 10 1.6e-02
+A -> U  everything                                      80.7 24 4.7e-08
+
+Model B: wind scale lambda = 1.03 (robust s.e. 0.15); wind intercept in the class-share equation -0.60 (z -2.5)
+Status quo constant of traders: solar -10696 NOK, wind -8405 NOK (difference 2291, z 1.2);  P(status quo | status-quo-only class): solar 0.930, wind 0.975
+
+[step 05 (both) finished in 40.1 min]
