@@ -3,8 +3,8 @@
 # =====================================================================
 # Leeds [A] 3A.  Footnote 16 of the article: the fully correlated model "did not converge" with simulated maximum likelihood.
 # Bayesian estimation (Gibbs + Metropolis-Hastings, package RSGHB through Apollo) does not need to maximise a likelihood, so a full
-# covariance matrix is feasible.  Remember (Leeds 1B, slide 3): "HB is NOT a model" - the model is the same mixed logit; only the estimator differs.
-# Units: coefficients in 1,000 NOK (so that the Metropolis-Hastings step sizes work; slide 69-70 warn about scaling).
+# covariance matrix is feasible. Leeds 1B (slide 3): "HB is NOT a model" - the model is the same mixed logit; only the estimator differs.
+# Units: coefficients in 1,000 NOK (so that the Metropolis-Hastings step sizes work; slides 69-70 warn about scaling).
 #   V_dev = b_cost * ( sum_k w_k x_k + cost / 1000 ),   V_sq = b_cost * w_sq,   w_k ~ Normal (full covariance),  b_cost ~ positive lognormal
 source(file.path(V2, "a3_published.R"))
 d <- dat[[SAMPLE]]; d$agegrp <- as.character(d$agegrp)
