@@ -3,17 +3,6 @@ Stage 1 (solar): four correlated Normals, fixed cost: LL -2538.6, 29 parameters,
 Apollo ignition sequence completed
 Stage 2 (solar): + random cost / scale dimension: LL -2511.6, 34 parameters, BIC 5320.1 (67 min; Relative function convergence (favorable))
 Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
- Reference: Anders's published model  LL -2536.4, 30 parameters, BIC 5335
 LR test stage 2 vs stage 1 (random cost): 54.1 on 5 df, p = 2e-10
 Model reported below: stage 2 (random cost) 
 

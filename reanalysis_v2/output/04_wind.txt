@@ -3,17 +3,6 @@ Stage 1 (wind): four correlated Normals, fixed cost: LL -2060.2, 29 parameters, 
 Apollo ignition sequence completed
 Stage 2 (wind): + random cost / scale dimension: LL -2045.4, 34 parameters, BIC 4388.3 (79 min; Relative function convergence (favorable))
 Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
- Reference: Anders's published model  LL -2065.2, 30 parameters, BIC 4392
 LR test stage 2 vs stage 1 (random cost): 29.6 on 5 df, p = 1.8e-05
 Model reported below: stage 2 (random cost) 
 

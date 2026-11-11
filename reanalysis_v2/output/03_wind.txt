@@ -3,41 +3,8 @@ Replication of Anders's model, wind sample (478 min, converged: successful conve
 
                               published       mine   diff
 log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
- log-likelihood                  -2065.2    -2054.7   10.5
 BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
- BIC                                4392     4371.9  -20.1
 parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
- parameters                           30         30
 
 Means in 100 NOK (a coefficient of -52.8 = 5,284 NOK of compensation); sd_mine_chol = diagonal Cholesky term
  parameter mean_published se_published mean_mine se_classical se_robust
@@ -69,6 +36,6 @@ Cost: mean of log b_cost  published -1.86  mine -2.27 (robust s.e. 0.19);  sd of
 
 Ratio of published standard error to my robust standard error for the coefficient MEANS (published / mine):
   m_sq m_el38 m_el57  m_pl3  m_pl6  m_nop  m_wil   m_d1   m_d2   m_d3 m_view 
- 0.123  0.210  0.152  0.206  0.347  0.249  0.237  0.068  0.129  0.207  0.211 
+ 0.123  0.210  0.152  0.206  0.347  0.249  0.237  0.068  0.129  0.207  0.211
 
 [step 03 (wind) finished in 478.3 min]
