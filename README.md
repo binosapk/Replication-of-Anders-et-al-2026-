@@ -11,7 +11,7 @@ Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindh
 | Path | Content |
 |---|---|
 | `sol_complete.csv`, `vind_complete.csv`, `CE_design_final.csv` | Survey responses (solar, wind) and choice-experiment design, from the original study |
-| `reanalysis_v2/` | The R scripts, one per analysis step, and `run_step.R` that runs one step |
+| `reanalysis_v2/Solar_vs_Wind_Reanalysis.R` | The R code: one script with one section per analysis step |
 | `reanalysis_v2/ssb_pop.csv` | Population margins (Statistics Norway, Innlandet, age 18+) used for the raking weights |
 | `reanalysis_v2/output/` | Text output of each step, and the acceptance-curve figure `fig_acceptance.png` (the only figure the scripts produce) |
 | `docs/Mini_Report_submitted_31Oct2026.pdf` | The mini-report as submitted on 31 October 2026 |
@@ -24,39 +24,40 @@ Not included: the saved model objects (`state_*.RData`, Apollo output), which th
 
 ## How to run
 
-Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`. The scripts find their own folder; there are no paths to edit.
+Software: R 4.6.1 with the packages `apollo`, `dplyr`, `tidyr` and `car`. The script finds its own folder; there are no paths to edit.
 
 From the repository folder:
 
-1. `Rscript reanalysis_v2/run_step.R 00 all` builds the data, covariates and raking weights.
-2. `Rscript reanalysis_v2/run_step.R 02 all` (or any other step) runs one step. The output goes to the console; redirect it to a file, for example `Rscript reanalysis_v2/run_step.R 13 all > reanalysis_v2/output/13.txt`.
-3. Some steps need the saved results of earlier steps (for example 04 loads the results of 02, 05 and 06b load those of 06, 13 loads those of 11 and 15, and 09 loads results of earlier model steps).
-4. Steps 00 and 02 were run from a fresh copy of this repository and gave exactly the same output as in `reanalysis_v2/output/`. The other steps were not rerun from this copy.
+1. `Rscript reanalysis_v2/Solar_vs_Wind_Reanalysis.R 00 all` builds the data, covariates and raking weights.
+2. `Rscript reanalysis_v2/Solar_vs_Wind_Reanalysis.R 02 all` (or any other step and sample) runs one step. The output goes to the console; redirect it to a file, for example `Rscript reanalysis_v2/Solar_vs_Wind_Reanalysis.R 13 all > reanalysis_v2/output/13.txt`. The header of the script lists all steps and samples.
+3. Each step saves its results in `state_<step>_<sample>.RData`, which later steps load (for example 04 loads the results of 02, 05 and 06b load those of 06, 13 loads those of 11 and 15, and 09 loads results of earlier model steps).
+4. Checks after the original step scripts were merged into this one file: steps 00, 01, 02, 09, 10, 12 and 13 give exactly the same output as before, and step 14 gives a byte-identical figure. Every slow step (03 to 08, 11, 15 and 17) was run once in quick test mode (`SW_QUICK=1`: 10 draws and 2 iterations, writing only `quick_*` files), which shows that the code runs but gives no results. The slow estimations were not repeated.
 5. The random-coefficient models are slow on one core: about 8 hours for the replication (step 03) and about 39 to 69 hours per job for the pooled mixed logit (step 11).
 
-## Scripts
+## Steps in the script
 
-| Step | Script | Content |
+Each step is one section of `Solar_vs_Wind_Reanalysis.R`; the published Table A.3 is defined once at the top.
+
+| Step | Content | Sample or job |
 |---|---|---|
-| 00 | `00_data.R` | Data, covariates, raking weights |
-| a3 | `a3_published.R` | Check of the published Table A.3 and Figure 6 |
-| 01 | `01_explore.R` | Descriptive statistics |
-| 02 | `02_mnl_ladder.R` | MNL ladder: shifters, income, attitudes |
-| 03 | `03_replicate_anders.R` | Benchmark mixed-logit replication, 500 MLHS draws (follows the specification and Apollo structure of the published script) |
-| 04 | `04_mixed_mvn.R` | Full-covariance mixed logit with random cost, staged estimation, 250 MLHS draws |
-| 05 | `05_pooled_lc.R` | Pooled two-class latent class |
-| 06, 06b | `06_latent_class.R`, `06b_lc3_constrained.R` | Latent classes LC2 and LC3 |
-| 07 | `07_hybrid.R` | Hybrid choice model with five indicators |
-| 08 | `08_bayes.R` | Bayesian full-covariance model (did not converge; exploratory) |
-| 09 | `09_policy.R` | Cost per kWh, acceptance curves |
-| 10 | `10_robustness.R` | Respondent exclusion rules |
-| 11 | `11_pooled_mixed.R` | Pooled mixed logit with all restrictions |
-| 12 | `12_pooled_mnl_scale.R` | Pooled MNL scale test |
-| 13 | `13_pooled_summary.R` | Likelihood-ratio tests and Holm correction for the pooled mixed logit |
-| 14 | `14_curves.R` | Acceptance curves (figure) |
-| 15 | `15_pooled_scaled.R` | Pooled mixed logit with a scaled optimiser (the unrestricted reference model U3) |
-| 16 | `16_collinearity.R` | Collinearity check of the covariates |
-| 17 | `17_pooled_seed.R` | Draw-seed check of the pooled mixed logit (unrestricted model and everything equal, seed 2027). Started but not completed: there is no result, so the tests above rest on one set of draws |
+| 00 | Data, covariates, raking weights | any |
+| 01 | Descriptive statistics | all |
+| 02 | MNL ladder: shifters, income, attitudes | all |
+| 03 | Benchmark mixed-logit replication, 500 MLHS draws (follows the specification and Apollo structure of the published script) | solar, wind |
+| 04 | Full-covariance mixed logit with random cost, staged estimation, 250 MLHS draws | solar, wind |
+| 05 | Pooled two-class latent class | both |
+| 06, 06b | Latent classes LC2 and LC3 (06b: trader cost coefficient fixed) | both |
+| 07 | Hybrid choice model with five indicators | solar, wind |
+| 08 | Bayesian full-covariance model (did not converge; exploratory) | solar, wind |
+| 09 | Cost per kWh, acceptance curves; check of Figure 6 | all |
+| 10 | Respondent exclusion rules | all |
+| 11 | Pooled mixed logit with all restrictions | job: U2, scale2, cov2, attr2, sq2, all2 |
+| 12 | Pooled MNL scale test | all |
+| 13 | Likelihood-ratio tests and Holm correction for the pooled mixed logit | all |
+| 14 | Acceptance curves (figure) | all |
+| 15 | Pooled mixed logit with a scaled optimiser (the unrestricted reference model U3) | job: U3, scale3, cov3, attr3, sq3, all3 |
+| 16 | Collinearity check of the covariates | all |
+| 17 | Draw-seed check of the pooled mixed logit (seed 2027). Started but not completed: there is no result, so the tests above rest on one set of draws | job: U4, all4 |
 
 ## Main results
 
@@ -109,7 +110,7 @@ BIC is lowest for the model with everything equal (9,564.4 against 9,745.8 for t
 
 - In the first round the model with equal shifters (−4557.14) fitted better than the unrestricted model that contains it (−4568.42), so the first-round unrestricted model had stopped early. Tests against it were discarded.
 - All models were restarted from the best solution (jobs ending in 2). The unscaled unrestricted restart (−4552.42) was still below the restricted scale model (−4552.39).
-- The unrestricted model was therefore re-estimated with parameter scaling in the optimiser (`15_pooled_scaled.R`; same model, draws and likelihood). It reached −4552.17, above every restricted model, and is the reference in `13_pooled_summary.R`.
+- The unrestricted model was therefore re-estimated with parameter scaling in the optimiser (step 15; same model, draws and likelihood). It reached −4552.17, above every restricted model, and is the reference in step 13.
 
 ## Limits
 
