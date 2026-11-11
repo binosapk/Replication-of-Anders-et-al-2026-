@@ -14,6 +14,11 @@ Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindh
 | `reanalysis_v2/` | The R scripts, one per analysis step, and `run_step.R` that runs one step |
 | `reanalysis_v2/ssb_pop.csv` | Population margins (Statistics Norway, Innlandet, age 18+) used for the raking weights |
 | `reanalysis_v2/output/` | Text output of each step, and the acceptance-curve figure `fig_acceptance.png` (the only figure the scripts produce) |
+| `docs/Mini_Report_submitted_31Oct2026.pdf` | The mini-report as submitted on 31 October 2026 |
+| `docs/Mini_Report_Updated_for_13Nov.docx` | The same report updated for the oral examination; text added after 31 October is in green |
+| `docs/Defense_Presentation_13Nov.pptx` | The 20-slide presentation (NMBU template); text added after 31 October is in green |
+| `docs/Solar_vs_Wind_Reanalysis_v2.docx` | The full Word report of the re-analysis |
+| `docs/Overleaf_update_for_13Nov.docx` | The paste-in changes (LaTeX) that turn the submitted report into the updated one |
 
 Not included: the saved model objects (`state_*.RData`, Apollo output), which the scripts create when they run, and the first-round pooled mixed-logit outputs. The first-round pooled runs stopped early and are invalid (see "Convergence of the pooled mixed logit").
 
@@ -113,4 +118,3 @@ BIC is lowest for the model with everything equal (9,564.4 against 9,745.8 for t
 - No bootstrap of standard errors was done. Standard errors of random-coefficient models, like the published ones, are probably too small.
 - The point estimates of the spread of the log-scale are 0.41 (solar) and 2.11 (wind), but the joint scale test does not reject equality (LR 0.4): this spread is weakly identified and is not interpreted.
 - Random-coefficient models use 250 to 500 draws (the article 2,000). The Bayesian model did not converge. Attitude variables are measured after the choice tasks and may partly rationalise the choices; BIC comparisons apply to choice models only (the hybrid likelihood includes the indicators).
-- The Word report with the full discussion is not in this repository.
