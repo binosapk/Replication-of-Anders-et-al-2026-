@@ -1,7 +1,7 @@
 # =====================================================================
 # 07  Hybrid choice (ICLV) with FIVE indicators and demographics in the structural equation
 # =====================================================================
-# Leeds [A] 3C/3D.  The survey measures one underlying "concern about nature / resistance to development" with five answers:
+# The survey measures one underlying "concern about nature / resistance to development" with five answers:
 #   Q7  general attitude to development (reverse), Q10 concern about nature effects, Q31 importance of visiting untouched nature,
 #   Q32 should untouched nature be kept at today's level (3 levels), Q33 perceived negative landscape impact of the technology in question.
 # Structural equation:  LV = gamma' z + eta,  eta ~ N(0,1),   z = age, gender, degree, income, exposure, organisation (EXOGENOUS)
