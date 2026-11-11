@@ -95,9 +95,9 @@ Pooled mixed logit (steps 11, 13, 15; 12,504 observations, 250 MLHS draws). The 
 |---|---:|---:|---:|---:|---:|---:|
 | Unrestricted (U3) | −4552.2 | 68 | | | | |
 | Cost scale equal | −4552.4 | 62 | 0.4 | 6 | 1.0 | 1.0 |
-| Taste covariance equal | −4565.6 | 58 | 26.8 | 10 | 0.0028 | 0.008 |
-| Ten attribute WTA means equal | −4572.7 | 58 | 41.1 | 10 | 1.1e-05 | 4e-05 |
-| Status quo constant equal | −4572.7 | 67 | 41.0 | 1 | 1.5e-10 | 8e-10 |
+| Taste covariance equal | −4565.6 | 58 | 26.8 | 10 | 0.0028 | 0.0084 |
+| Ten attribute WTA means equal | −4572.7 | 58 | 41.1 | 10 | 1.1e-05 | 4.4e-05 |
+| Status quo constant equal | −4572.7 | 67 | 41.0 | 1 | 1.5e-10 | 7.5e-10 |
 | Seven status quo shifters equal | −4557.1 | 61 | 9.9 | 7 | 0.19 | 0.38 |
 | Everything equal (joint test) | −4621.8 | 34 | 139.3 | 34 | 1.1e-14 | |
 
