@@ -7,7 +7,7 @@
 # Structural equation:  LV = gamma' z + eta,  eta ~ N(0,1),   z = age, gender, degree, income, exposure, organisation (EXOGENOUS)
 # Measurement:          each indicator ~ ordered logit( zeta_i * LV ),  zeta_conc > 0 anchors the sign (higher LV = more concern)
 # Choice:               V_sq = b_cost * ( w_sq + lambda * LV ),   V_dev has  w_nop + lambda2 * LV  on the no-protection dummy
-# Following the slides (3C, p. 24-29): the log-likelihood includes the indicators and must NOT be compared with choice-only models;
+# Following the Leeds slides (3C, p. 24-29): the log-likelihood includes the indicators and must NOT be compared with choice-only models;
 # the safe way to use the model is through the covariates z (reweighting a sample, a future population), not by moving LV by "+-1 SD".
 d <- dat[[SAMPLE]]
 d$nat_pres_f <- ifelse(is.na(d$nat_pres), 2, d$nat_pres); d$nat_pres_ok <- as.numeric(!is.na(d$nat_pres))
