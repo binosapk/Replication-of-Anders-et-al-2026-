@@ -14,11 +14,6 @@ Re-analysis of the discrete choice experiment in Dugstad, A., Hoel, J. and Lindh
 | `reanalysis_v2/Solar_vs_Wind_Reanalysis.R` | The R code: one script with one section per analysis step |
 | `reanalysis_v2/ssb_pop.csv` | Population margins (Statistics Norway, Innlandet, age 18+) used for the raking weights |
 | `reanalysis_v2/output/` | Text output of each step, and the acceptance-curve figure `fig_acceptance.png` (the only figure the scripts produce) |
-| `docs/Mini_Report_submitted_31Oct2026.pdf` | The mini-report as submitted on 31 October 2026 |
-| `docs/Mini_Report_Updated_for_13Nov.docx` | The same report updated for the oral examination; text added after 31 October is in green |
-| `docs/Defense_Presentation_13Nov.pptx` | The 20-slide presentation (NMBU template); text added after 31 October is in green |
-| `docs/Solar_vs_Wind_Reanalysis_v2.docx` | The full Word report of the re-analysis |
-| `docs/Overleaf_update_for_13Nov.docx` | The paste-in changes (LaTeX) that turn the submitted report into the updated one |
 
 Not included: the saved model objects (`state_*.RData`, Apollo output), which the scripts create when they run, and the first-round pooled mixed-logit outputs. The first-round pooled runs stopped early and are invalid (see "Convergence of the pooled mixed logit").
 
